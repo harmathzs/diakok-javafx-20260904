@@ -31,7 +31,7 @@
                      <Insets bottom="10.0" />
                   </VBox.margin>
                </Button>
-               <Button minWidth="76.0" mnemonicParsing="false" text="Kecskeméti">
+               <Button id="btn_kecskemeti" fx:id="btn_kecskemeti" minWidth="76.0" mnemonicParsing="false" onAction="#onKecskemetiButtonClick" text="Kecskeméti">
                   <VBox.margin>
                      <Insets bottom="10.0" />
                   </VBox.margin>
