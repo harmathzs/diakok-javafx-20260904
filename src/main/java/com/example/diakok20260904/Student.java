@@ -79,4 +79,23 @@ public class Student {
     public void setMagas(int magas) {
         this.magas = magas;
     }
+
+
+
+    public Student(String line) {
+        String[] split = line.split(";");
+        setAz(Integer.parseInt(split[0]));
+        setVnev(split[1]);
+        setKnev(split[2]);
+        setNem(split[3].charAt(0));
+        setOsztaly(split[4]);
+        setDatum(split[5]);
+        setLakhely(split[6]);
+        setMagas(Integer.parseInt(split[7]));
+    }
+
+    public String toString() {
+        return getVnev()+" "+getKnev()+", "+getOsztaly()+" ("+getLakhely()+" "+getDatum()+
+                ", "+getMagas()+" cm)";
+    }
 }
