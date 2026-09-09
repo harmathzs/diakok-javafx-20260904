@@ -57,6 +57,7 @@ public class Students {
             while ( (line = fileReader.readLine()) != null) {
                 Student student = new Student(line);
                 students[i] = student;
+                i++;
             }
         }
         catch (Exception e) {

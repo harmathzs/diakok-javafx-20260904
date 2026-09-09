@@ -83,6 +83,14 @@ public class Student {
 
 
     public Student(String line) {
-        // TODO
+        String[] split = line.split(";");
+        setAz(Integer.parseInt(split[0]));
+        setVnev(split[1]);
+        setKnev(split[2]);
+        setNem(split[3].charAt(0));
+        setOsztaly(split[4]);
+        setDatum(split[5]);
+        setLakhely(split[6]);
+        setMagas(Integer.parseInt(split[7]));
     }
 }
