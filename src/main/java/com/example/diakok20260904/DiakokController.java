@@ -26,6 +26,8 @@ public class DiakokController implements Initializable {
     @FXML
     public Button btn_1996;
     @FXML
+    public Button btn_10a;
+    @FXML
     private Label welcomeText;
 
     private Students students;
@@ -76,6 +78,17 @@ public class DiakokController implements Initializable {
         List<String> listviewContents = new ArrayList<String>();
         for (Student student: students.getStudents()) {
             if (student.getDatum().startsWith("1996")) {
+                listviewContents.add(student.toString());
+            }
+        }
+        ObservableList<String> observableList = FXCollections.observableList(listviewContents);
+        listview.setItems(observableList);
+    }
+
+    public void on10aButtonClick(ActionEvent actionEvent) {
+        List<String> listviewContents = new ArrayList<String>();
+        for (Student student: students.getStudents()) {
+            if (student.getOsztaly().equals("10/A")) {
                 listviewContents.add(student.toString());
             }
         }

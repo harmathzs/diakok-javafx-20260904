@@ -41,7 +41,7 @@
                      <Insets bottom="10.0" />
                   </VBox.margin>
                </Button>
-               <Button minWidth="76.0" mnemonicParsing="false" text="10/A">
+               <Button id="btn_10a" fx:id="btn_10a" minWidth="76.0" mnemonicParsing="false" onAction="#on10aButtonClick" text="10/A">
                   <VBox.margin>
                      <Insets bottom="10.0" />
                   </VBox.margin>
