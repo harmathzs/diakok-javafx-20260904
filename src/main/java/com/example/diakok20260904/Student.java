@@ -93,4 +93,9 @@ public class Student {
         setLakhely(split[6]);
         setMagas(Integer.parseInt(split[7]));
     }
+
+    public String toString() {
+        return getVnev()+" "+getKnev()+", "+getOsztaly()+" ("+getLakhely()+" "+getDatum()+
+                ", "+getMagas()+" cm)";
+    }
 }
