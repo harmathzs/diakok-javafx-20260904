@@ -26,7 +26,7 @@
                      <Insets bottom="10.0" />
                   </VBox.margin>
                </Button>
-               <Button minWidth="76.0" mnemonicParsing="false" text="Sándorok">
+               <Button id="btn_sandorok" fx:id="btn_sandorok" minWidth="76.0" mnemonicParsing="false" onAction="#onSandorokButtonClick" text="Sándorok">
                   <VBox.margin>
                      <Insets bottom="10.0" />
                   </VBox.margin>

@@ -10,6 +10,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class DiakokController implements Initializable {
@@ -17,6 +19,8 @@ public class DiakokController implements Initializable {
     public Button btn_mindenki;
     @FXML
     public ListView<String> listview;
+    @FXML
+    public Button btn_sandorok;
     @FXML
     private Label welcomeText;
 
@@ -39,6 +43,17 @@ public class DiakokController implements Initializable {
             listviewContents[i] = students.getStudents()[i].toString();
         }
         ObservableList<String> observableList = FXCollections.observableArrayList(listviewContents);
+        listview.setItems(observableList);
+    }
+
+    public void onSandorokButtonClick(ActionEvent actionEvent) {
+        List<String> listviewContents = new ArrayList<String>();
+        for (Student student: students.getStudents()) {
+            if (student.getKnev().equals("Sándor")) {
+                listviewContents.add(student.toString());
+            }
+        }
+        ObservableList<String> observableList = FXCollections.observableList(listviewContents);
         listview.setItems(observableList);
     }
 }
