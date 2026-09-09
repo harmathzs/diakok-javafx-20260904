@@ -1,5 +1,9 @@
 package com.example.diakok20260904;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.InputStreamReader;
+
 public class Students {
     private Student[] students;
 
@@ -29,7 +33,37 @@ public class Students {
     }
 
     public Student[] loadFromFile(String filename) {
-        // TODO - load from file
+        // Pre-load from file
+        int n = 0;
+        try {
+
+            String line;
+            BufferedReader fileReader = new BufferedReader(new FileReader(filename));
+            while ( (line = fileReader.readLine()) != null) {
+                // Student student = new Student(line);
+                n++;
+            }
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        setStudents(new Student[n]);
+        // load data
+        int i = 0;
+        try {
+            String line;
+            BufferedReader fileReader = new BufferedReader(new FileReader(filename));
+            while ( (line = fileReader.readLine()) != null) {
+                Student student = new Student(line);
+                students[i] = student;
+            }
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
         return getStudents();
     }
 }

@@ -79,4 +79,10 @@ public class Student {
     public void setMagas(int magas) {
         this.magas = magas;
     }
+
+
+
+    public Student(String line) {
+        // TODO
+    }
 }

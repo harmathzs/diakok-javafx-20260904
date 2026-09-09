@@ -21,6 +21,6 @@ public class DiakokController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         students = new Students();
-        students.loadFromFile("file:diakok.csv");
+        students.loadFromFile("diakok.csv");
     }
 }
