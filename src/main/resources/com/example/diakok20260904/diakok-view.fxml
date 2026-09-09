@@ -58,5 +58,5 @@
          </ListView>
       </children>
    </HBox>
-    <Button onAction="#onHelloButtonClick" text="Lista mentése" />
+    <Button id="btn_save" fx:id="btn_save" onAction="#onSaveButtonClick" text="Lista mentése" />
 </VBox>

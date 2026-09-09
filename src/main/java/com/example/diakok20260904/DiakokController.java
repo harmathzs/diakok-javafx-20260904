@@ -6,9 +6,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 
+import java.io.PrintWriter;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -28,14 +28,9 @@ public class DiakokController implements Initializable {
     @FXML
     public Button btn_10a;
     @FXML
-    private Label welcomeText;
+    public Button btn_save;
 
     private Students students;
-
-    @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
-    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -94,5 +89,24 @@ public class DiakokController implements Initializable {
         }
         ObservableList<String> observableList = FXCollections.observableList(listviewContents);
         listview.setItems(observableList);
+    }
+
+    public void onSaveButtonClick(ActionEvent actionEvent) {
+        String[] listviewContents = new String[students.getStudents().length];
+        for (int i=0; i<students.getStudents().length; i++) {
+            listviewContents[i] = students.getStudents()[i].toString();
+        }
+
+        // formázott kiírás:
+        try {
+            PrintWriter pw = new PrintWriter("adatok.txt");
+            for (String line: listviewContents) {
+                pw.println(line);
+            }
+            pw.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 }
