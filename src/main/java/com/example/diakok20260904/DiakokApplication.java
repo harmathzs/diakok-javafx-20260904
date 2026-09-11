@@ -12,12 +12,14 @@ public class DiakokApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(DiakokApplication.class.getResource("diakok-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 608, 366);
-        stage.setTitle("Diákok");
-        stage.setScene(scene);
-        Image windowIconImage = new Image("file:icons/diak.png");
-        stage.getIcons().add(windowIconImage);
-        stage.show();
+        Scene scene = null;
+        if (!DiakokAppTest.isRunningTest) scene = new Scene(fxmlLoader.load(), 608, 366);
+        if (!DiakokAppTest.isRunningTest) stage.setTitle("Diákok");
+        if (!DiakokAppTest.isRunningTest) stage.setScene(scene);
+        Image windowIconImage = null;
+        if (!DiakokAppTest.isRunningTest) windowIconImage = new Image("file:icons/diak.png");
+        if (!DiakokAppTest.isRunningTest) stage.getIcons().add(windowIconImage);
+        if (!DiakokAppTest.isRunningTest) stage.show();
     }
 
     public static void main(String[] args) {

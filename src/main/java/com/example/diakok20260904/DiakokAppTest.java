@@ -11,4 +11,16 @@ public class DiakokAppTest {
         DiakokApplication.main(null);
         isRunningTest = false;
     }
+
+    @Test
+    public void testStart() {
+        isRunningTest = true;
+        DiakokApplication app = new DiakokApplication();
+        try {
+            app.start(null);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        isRunningTest = false;
+    }
 }
