@@ -1,18 +1,28 @@
 package com.example.diakok20260904;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 
 public class DiakokTest {
     public static boolean isRunningTest = false;
 
+    @BeforeClass
+    public static void testBeforeClass() {
+        System.out.println("testBeforeClass");
+    }
+
+    @AfterClass
+    public static void testAfterClass() {
+        System.out.println("testAfterClass");
+    }
+
     @Before
     public void testBefore() {
+        System.out.println("testBefore");
         isRunningTest = true;
     }
     @After
     public void testAfter() {
+        System.out.println("testAfter");
         isRunningTest = false;
     }
 
