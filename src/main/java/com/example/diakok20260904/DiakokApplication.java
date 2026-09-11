@@ -21,6 +21,6 @@ public class DiakokApplication extends Application {
     }
 
     public static void main(String[] args) {
-        launch();
+        if (!DiakokAppTest.isRunningTest) launch();
     }
 }
