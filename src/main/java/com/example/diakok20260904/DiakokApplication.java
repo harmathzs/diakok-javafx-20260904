@@ -11,16 +11,19 @@ import java.io.IOException;
 public class DiakokApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(DiakokApplication.class.getResource("diakok-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 608, 366);
-        stage.setTitle("Diákok");
-        stage.setScene(scene);
-        Image windowIconImage = new Image("file:icons/diak.png");
-        stage.getIcons().add(windowIconImage);
-        stage.show();
+        FXMLLoader fxmlLoader = null;
+        if (!DiakokTest.isRunningTest) fxmlLoader = new FXMLLoader(DiakokApplication.class.getResource("diakok-view.fxml"));
+        Scene scene = null;
+        if (!DiakokTest.isRunningTest) scene = new Scene(fxmlLoader.load(), 608, 366);
+        if (!DiakokTest.isRunningTest) stage.setTitle("Diákok");
+        if (!DiakokTest.isRunningTest) stage.setScene(scene);
+        Image windowIconImage = null;
+        if (!DiakokTest.isRunningTest) windowIconImage = new Image("file:icons/diak.png");
+        if (!DiakokTest.isRunningTest) stage.getIcons().add(windowIconImage);
+        if (!DiakokTest.isRunningTest) stage.show();
     }
 
     public static void main(String[] args) {
-        launch();
+        if (!DiakokTest.isRunningTest) launch();
     }
 }
