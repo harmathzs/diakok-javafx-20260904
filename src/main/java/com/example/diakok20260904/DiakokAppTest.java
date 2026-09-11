@@ -50,5 +50,7 @@ public class DiakokAppTest {
         controller.onKecskemetiButtonClick(null);
         controller.on1996ButtonClick(null);
         controller.on10aButtonClick(null);
+
+        controller.onSaveButtonClick(null);
     }
 }

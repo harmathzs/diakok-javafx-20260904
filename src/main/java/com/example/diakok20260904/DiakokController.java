@@ -99,11 +99,13 @@ public class DiakokController implements Initializable {
 
         // formázott kiírás:
         try {
-            PrintWriter pw = new PrintWriter("adatok.txt");
-            for (String line: listviewContents) {
-                pw.println(line);
+            if (!DiakokAppTest.isRunningTest) {
+                PrintWriter pw = new PrintWriter("adatok.txt");
+                for (String line: listviewContents) {
+                    pw.println(line);
+                }
+                pw.close();
             }
-            pw.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
