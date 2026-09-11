@@ -1,0 +1,205 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
+  <title>Coverage Report > Student</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">com.example.diakok20260904</a>
+</div>
+
+<h1>Coverage Summary for Class: Student (com.example.diakok20260904)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">Student</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    88,9%
+  </span>
+  <span class="absValue">
+    (16/18)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    92,9%
+  </span>
+  <span class="absValue">
+    (26/28)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package com.example.diakok20260904;
+&nbsp;
+&nbsp;public class Student {
+&nbsp;    private int az;
+&nbsp;
+&nbsp;    public void setAz(int az) {
+<b class="fc">&nbsp;        this.az = az;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public int getAz() {
+<b class="nc">&nbsp;        return az;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    private String vnev;
+&nbsp;
+&nbsp;    public String getVnev() {
+<b class="fc">&nbsp;        return vnev;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public void setVnev(String vnev) {
+<b class="fc">&nbsp;        this.vnev = vnev;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    private String knev;
+&nbsp;
+&nbsp;    public String getKnev() {
+<b class="fc">&nbsp;        return knev;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public void setKnev(String knev) {
+<b class="fc">&nbsp;        this.knev = knev;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    private char nem;
+&nbsp;
+&nbsp;    public char getNem() {
+<b class="nc">&nbsp;        return nem;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public void setNem(char nem) {
+<b class="fc">&nbsp;        this.nem = nem;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    private String osztaly;
+&nbsp;
+&nbsp;    public String getOsztaly() {
+<b class="fc">&nbsp;        return osztaly;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public void setOsztaly(String osztaly) {
+<b class="fc">&nbsp;        this.osztaly = osztaly;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    private String datum;
+&nbsp;
+&nbsp;    public String getDatum() {
+<b class="fc">&nbsp;        return datum;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public void setDatum(String datum) {
+<b class="fc">&nbsp;        this.datum = datum;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    private String lakhely;
+&nbsp;
+&nbsp;    public String getLakhely() {
+<b class="fc">&nbsp;        return lakhely;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public void setLakhely(String lakhely) {
+<b class="fc">&nbsp;        this.lakhely = lakhely;</b>
+&nbsp;    }
+&nbsp;    private int magas;
+&nbsp;
+&nbsp;    public int getMagas() {
+<b class="fc">&nbsp;        return magas;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public void setMagas(int magas) {
+<b class="fc">&nbsp;        this.magas = magas;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;
+&nbsp;
+<b class="fc">&nbsp;    public Student(String line) {</b>
+<b class="fc">&nbsp;        String[] split = line.split(&quot;;&quot;);</b>
+<b class="fc">&nbsp;        setAz(Integer.parseInt(split[0]));</b>
+<b class="fc">&nbsp;        setVnev(split[1]);</b>
+<b class="fc">&nbsp;        setKnev(split[2]);</b>
+<b class="fc">&nbsp;        setNem(split[3].charAt(0));</b>
+<b class="fc">&nbsp;        setOsztaly(split[4]);</b>
+<b class="fc">&nbsp;        setDatum(split[5]);</b>
+<b class="fc">&nbsp;        setLakhely(split[6]);</b>
+<b class="fc">&nbsp;        setMagas(Integer.parseInt(split[7]));</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public String toString() {
+<b class="fc">&nbsp;        return getVnev()+&quot; &quot;+getKnev()+&quot;, &quot;+getOsztaly()+&quot; (&quot;+getLakhely()+&quot; &quot;+getDatum()+</b>
+<b class="fc">&nbsp;                &quot;, &quot;+getMagas()+&quot; cm)&quot;;</b>
+&nbsp;    }
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2026-09-11 09:53</div>
+</div>
+</body>
+</html>
