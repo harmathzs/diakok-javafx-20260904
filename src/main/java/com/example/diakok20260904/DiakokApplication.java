@@ -11,8 +11,7 @@ import java.io.IOException;
 public class DiakokApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = null;
-        if (!DiakokTest.isRunningTest) fxmlLoader = new FXMLLoader(DiakokApplication.class.getResource("diakok-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(DiakokApplication.class.getResource("diakok-view.fxml"));
         Scene scene = null;
         if (!DiakokTest.isRunningTest) scene = new Scene(fxmlLoader.load(), 608, 366);
         if (!DiakokTest.isRunningTest) stage.setTitle("Diákok");
