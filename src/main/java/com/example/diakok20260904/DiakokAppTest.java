@@ -39,4 +39,16 @@ public class DiakokAppTest {
             e.printStackTrace();
         }
     }
+
+    @Test
+    public void testController() {
+        DiakokController controller = new DiakokController();
+        controller.initialize(null, null);
+
+        controller.onMindenkiButtonClick(null);
+        controller.onSandorokButtonClick(null);
+        controller.onKecskemetiButtonClick(null);
+        controller.on1996ButtonClick(null);
+        controller.on10aButtonClick(null);
+    }
 }

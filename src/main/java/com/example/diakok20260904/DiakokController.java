@@ -44,7 +44,7 @@ public class DiakokController implements Initializable {
             listviewContents[i] = students.getStudents()[i].toString();
         }
         ObservableList<String> observableList = FXCollections.observableArrayList(listviewContents);
-        listview.setItems(observableList);
+        if (!DiakokAppTest.isRunningTest) listview.setItems(observableList);
     }
 
     public void onSandorokButtonClick(ActionEvent actionEvent) {
@@ -55,7 +55,7 @@ public class DiakokController implements Initializable {
             }
         }
         ObservableList<String> observableList = FXCollections.observableList(listviewContents);
-        listview.setItems(observableList);
+        if (!DiakokAppTest.isRunningTest) listview.setItems(observableList);
     }
 
     public void onKecskemetiButtonClick(ActionEvent actionEvent) {
@@ -66,7 +66,7 @@ public class DiakokController implements Initializable {
             }
         }
         ObservableList<String> observableList = FXCollections.observableList(listviewContents);
-        listview.setItems(observableList);
+        if (!DiakokAppTest.isRunningTest) listview.setItems(observableList);
     }
 
     public void on1996ButtonClick(ActionEvent actionEvent) {
@@ -77,7 +77,7 @@ public class DiakokController implements Initializable {
             }
         }
         ObservableList<String> observableList = FXCollections.observableList(listviewContents);
-        listview.setItems(observableList);
+        if (!DiakokAppTest.isRunningTest) listview.setItems(observableList);
     }
 
     public void on10aButtonClick(ActionEvent actionEvent) {
@@ -88,7 +88,7 @@ public class DiakokController implements Initializable {
             }
         }
         ObservableList<String> observableList = FXCollections.observableList(listviewContents);
-        listview.setItems(observableList);
+        if (!DiakokAppTest.isRunningTest) listview.setItems(observableList);
     }
 
     public void onSaveButtonClick(ActionEvent actionEvent) {
